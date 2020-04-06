@@ -9,4 +9,6 @@
         force: true
         path: SpaceVim/init.toml
     ~/.zshrc:
-- shell: []
+- shell:
+    - git submodule sync --recursive
+    - git update-submodules
