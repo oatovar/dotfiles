@@ -5,10 +5,26 @@
 - clean: ['~', '~/.config']
 - link:
     ~/.Spacevim.d/init.toml:
-        create: true
         force: true
         path: SpaceVim/init.toml
     ~/.zshrc:
 - shell:
+    - >
+      sudo zypper install
+      git
+      zsh
+      neovim
+      the_silver_surfer
+      python3-neovim
+      go
+      rust
+      curl
+    # Install ohmyzsh
+    - curl -fsSL https://raw.githubusercontent.com/ohmyzsh/master/tools/install.sh | bash
+    # Install SpaceVim
+    - curl -fsSL https://spacevim.org/install.sh | bash
+    # Install gef
+    - curl -fsSL https://github.com/hugsy/gef/raw/master/scripts/gef.sh | bash
+    - [chsh -s $(which zsh), Making zsh the default shell]
     - git submodule sync --recursive
     - git update-submodules
