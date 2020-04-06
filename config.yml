@@ -1,3 +1,11 @@
-- clean: []
-- link: {}
+- defaults:
+    link:
+        create: true
+        relink: true
+- clean: ['~', '~/.config']
+- link:
+    ~/.Spacevim.d/init.toml:
+        create: true
+        force: true
+        path: SpaceVim/init.toml
 - shell: []
