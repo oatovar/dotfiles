@@ -8,7 +8,7 @@ preferences.
 
 ### Nushell
 
-For my shell, I use [Nushell][https://www.nushell.sh] due to it's syntax
+For my shell, I use [Nushell](https://www.nushell.sh) due to it's syntax
 and emphasis on a functional style of scripting.
 
 ### NvChad
