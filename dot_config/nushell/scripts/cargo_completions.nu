@@ -1,0 +1,41 @@
+# Compile a local pacakge and all of its dependencies
+export extern "cargo build" [
+  --quiet(-q) # Do not print cargo log messages
+  --package(-p): string # Package to build (see `cargo help pkgid`)
+  --workspace # Build all packages in the workspace
+  --exclude: string # Exclude packages from the build
+  --verbose(-v) # Use verbose output (-vv very verbose/build.rs output)
+  --all # Alias for --workspace (deprecated)
+  --color: string # Coloring: auto, always, never
+  --jobs(-j): int # Number of parallel jobs, defaults to # of CPUs
+  --frozen # Require Cargo.lock and cache are up to date
+  --keep-going # Do not abort the build as soon as there is an error (unstable)
+  --lib # Build only this package's library
+  --locked # Require Cargo.lock is up to date
+  --bin: string # Build all binaries
+  --offline # Run without accessing the network
+  --bins # Build all binaries
+  --config: string # Override a configuration value (ex: <KEY>=<VALUE>)
+  --examples # Build all examples
+  --test: string # Build only the specified test target
+  --tests # Build all tests
+  --bench: string # Build only the specified bench target
+  --benches # Build all benches
+  --all-targets # Build all targets
+  --release(-r) # Build artifacts in release mode, with optimizations
+  --profile: string # Build artifacts with the specified profile
+  --features(-F): string # Space or comma separated list of features to activate
+  --all-features # Activate all available features
+  --no-default-features # Do not activate the `default` feature
+  --target: string # Build for the target triple
+  --target-dir: string # Directory for all generated artifacts
+  --out-dir: string # Copy final artifacts to this directory (unstasble)
+  --manifest-path: string # Path to Cargo.toml
+  --ignore-rust-version # Ignore `rust-version` specification in packages
+  --message-format: string # Error format
+  --build-plan # Output the build plan in JSON (unstable)
+  --unit-graph # Output build graph in JSON (unstable)
+  --future-incompat-report # Outputs a future incompatibility report at the end of the build
+  --timings # Timing output fomrats (unstable) (comma separated): html, json
+  --help(-h) # Print help
+]
